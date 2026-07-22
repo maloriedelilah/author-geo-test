@@ -1,6 +1,7 @@
 ---
 slug: "mdcooper"
 name: "M. D. Cooper"
+photo: "./mdcooper-photo.jpg"
 bio: "M. D. Cooper is the creator of the Aeon 14 universe, a hard science-fiction, space-opera setting spanning well over a hundred novels across a single shared timeline, co-written with a team of other authors. Cooper has personally written more than seventy of those books and co-written dozens more, following soldiers, colonists, and post-human minds across centuries of interstellar expansion, conflict, and reinvention. This site focuses on two of those threads: Origins of Destiny, following a young Commander Tanis Richards through the InnerSol reaches of the Terran Hegemony military, and The Intrepid Saga, the generation-spanning voyage that carries her — and humanity's last, best colony ship — out of a dying Sol System."
 url: "https://static.aeon14.com"
 sameAs:

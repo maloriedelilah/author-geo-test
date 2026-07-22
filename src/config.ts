@@ -13,6 +13,14 @@ export interface NavItem {
 export const siteConfig = {
   siteUrl: 'https://static.aeon14.com',
 
+  // --- Slogan ----------------------------------------------------------
+  // A short line describing the site, shown at the very top of the homepage
+  // (above "Latest release") — e.g. "Hard science fiction for readers who
+  // like their futures plausible." Plain display text, not a schema.org
+  // entity, so it lives here rather than in src/content/. Optional — leave
+  // undefined to skip it entirely.
+  slogan: 'Hard science fiction. Real physics. Real consequences.' as string | undefined,
+
   // --- Theme -----------------------------------------------------------
   // `mode` picks one of the two built-in palettes (see src/styles/theme.css).
   // `accent` is optional — override just the accent color without touching CSS.
