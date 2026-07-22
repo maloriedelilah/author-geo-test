@@ -2,7 +2,7 @@
 title: "Outsystem"
 subtitle: "An Aeon 14 Novel"
 slug: "outsystem"
-description: "Desperate to escape a Sol System sliding toward collapse, Tanis Richards wins passage aboard the GSS Intrepid — humanity's largest colony ship, launching into the dark to found a new home among the stars. But a hidden faction means to sabotage the ship before it ever clears the system, and only Tanis's military-intelligence instincts and her AI partner stand between the Intrepid and disaster. Nothing's going to stand in her way."
+description: "Demoted by the military and derided by the media as 'the Butcher of Toro,' Tanis Richards is still one of the sharpest counterinsurgency officers in the Terran Hegemony. When colony leaders recruit her to stop terrorists from destroying the GSS Intrepid during its final construction phase at the Mars Outer Shipyards, it looks like her ticket out of a dying Sol System. But powerful corporate and governmental forces — and factions within her own military — are working just as hard to keep the colony ship grounded, and Tanis will have to fight terrorists, mercenaries, assassins, and political enemies alike to see the Intrepid fly."
 cover: "./cover.svg"
 authors:
   - "mdcooper"
