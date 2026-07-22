@@ -2,7 +2,7 @@
 title: "A Path in the Darkness"
 subtitle: "An Aeon 14 Novel"
 slug: "a-path-in-the-darkness"
-description: "The Intrepid is falling into a star. Generations into its voyage, the great colony ship faces its greatest crisis yet — a catastrophic course toward a dying sun that could end the mission before it truly begins. As resources dwindle and factions aboard the ship turn against one another, Tanis Richards must find a way to save the Intrepid and the thousands of lives depending on her, one desperate decision at a time."
+description: "When the Intrepid's AI loses control of the ship's engines and core systems while battling a saboteur, it wakes Colonel Tanis Richards from stasis as a last resort. Alone aboard a failing colony ship, Tanis must uncover what happened and find a way to stop the Intrepid from being consumed by a nearby star — and even if she succeeds, the decades-long journey to New Eden means she'll have to find a path in the darkness all over again."
 cover: "./cover.svg"
 authors:
   - "mdcooper"
@@ -27,4 +27,4 @@ editions:
     currency: "USD"
 ---
 
-Book 2 of *The Intrepid Saga*. **Draft blurb** — assembled from the one confirmed tagline ("The Intrepid is falling into a star") plus context from the surrounding books; please swap in your official back-cover copy before launch.
+Book 2 of *The Intrepid Saga*.
