@@ -2,7 +2,7 @@
 title: "Storming the Norse Wind"
 slug: "storming-the-norse-wind"
 description: "Tanis Richards and the crew of the TSS Kirby Jones are eleven months into a long patrol along the edge of the InnerSol asteroid belt — tired, low on supplies, and ready for a refit. When a freighter called the Norse Wind crosses their patrol space on suspicion of running contraband, what should be a routine stop-and-search turns into a fight for supremacy in the cold dark between worlds."
-cover: "./cover.svg"
+cover: "./cover.jpg"
 authors:
   - "mdcooper"
 series: "origins-of-destiny"

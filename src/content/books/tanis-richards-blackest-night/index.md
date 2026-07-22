@@ -2,7 +2,7 @@
 title: "Tanis Richards: Blackest Night"
 slug: "tanis-richards-blackest-night"
 description: "Six months after the events on Europa, Tanis and the crew of the Kirby Jones are still working to uncover who was behind her betrayal and the near-assassination of the Oligarch. A routine intelligence exchange with the Jovians spirals into deeper espionage than she bargained for, forcing a detour to Saturn on the way to Earth — and dragging Tanis into a race against time to protect herself, and millions of others, from her most dangerous conspiracy yet."
-cover: "./cover.svg"
+cover: "./cover.jpg"
 authors:
   - "mdcooper"
 series: "origins-of-destiny"

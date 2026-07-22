@@ -2,7 +2,7 @@
 title: "Tanis Richards: Masquerade"
 slug: "tanis-richards-masquerade"
 description: "Finally granted real shore leave on Mars, Tanis gets an urgent message from Harm Ellis: get to Ceres and find a missing operative. She never makes it. Faking her own death to go undercover with her partner Darla, Tanis tracks an artificial infiltrator known as Chameleon across the Sol System — and uncovers a plot to assassinate a government official and frame her for it, forcing her into a desperate race to clear her name before she becomes the system's most wanted fugitive."
-cover: "./cover.svg"
+cover: "./cover.jpg"
 authors:
   - "mdcooper"
 series: "origins-of-destiny"
