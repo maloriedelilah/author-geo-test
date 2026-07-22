@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#142c36"/>
+      <stop offset="1" stop-color="#05060a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <rect x="40" y="70" width="520" height="3" fill="#d2b478"/>
+  <text x="300.0" y="340" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="bold" fill="#f0f0eb"><tspan x="300.0" dy="0">Outsystem</tspan></text>
+  <text x="300.0" y="430" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#d2b478">The Intrepid Saga · 1</text>
+  <rect x="40" y="790" width="520" height="3" fill="#d2b478"/>
+  <text x="300.0" y="830" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#f0f0eb" letter-spacing="2">M. D. COOPER</text>
+  <text x="300.0" y="860" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#707070">PLACEHOLDER COVER — replace before launch</text>
+</svg>
