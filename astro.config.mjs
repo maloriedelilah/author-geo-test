@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config';
 // (author, book, series) off `import.meta.env.SITE`. An unset/placeholder
 // site silently produces broken @ids that pass `astro build` but are wrong.
 export default defineConfig({
-  site: 'https://author-geo-test.pages.dev',
+  site: 'https://static.aeon14.com',
   output: 'static',
 
   // --- Tier 2 switch (deferred; NOT part of this slice) ---
