@@ -1,7 +1,7 @@
 ---
 title: "Tanis Richards: Blackest Night"
 slug: "tanis-richards-blackest-night"
-description: "Undercover and out of easy options, Tanis Richards is pulled deeper into the Hegemony's black-ops world, where the enemies she's hunted start hunting back. A hard military science-fiction thriller continuing Tanis's transformation from patrol officer to the operative who will one day captain humanity's escape from Sol."
+description: "Six months after the events on Europa, Tanis and the crew of the Kirby Jones are still working to uncover who was behind her betrayal and the near-assassination of the Oligarch. A routine intelligence exchange with the Jovians spirals into deeper espionage than she bargained for, forcing a detour to Saturn on the way to Earth — and dragging Tanis into a race against time to protect herself, and millions of others, from her most dangerous conspiracy yet."
 cover: "./cover.svg"
 authors:
   - "mdcooper"
@@ -26,4 +26,4 @@ editions:
     currency: "USD"
 ---
 
-Book 3 of *Origins of Destiny*. **Draft blurb** — I couldn't pull a verified retailer synopsis for this title, so the description above is a reasonable placeholder consistent with the series; please replace it with your official back-cover copy before launch.
+Book 3 of *Origins of Destiny*.
