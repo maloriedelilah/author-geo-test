@@ -35,8 +35,8 @@ export const siteConfig = {
   // centered underneath. Ask the author which they'd like, same as theme.mode.
   header: {
     logo: {
-      src: undefined as string | undefined, // e.g. '/logo.svg'
-      alt: undefined as string | undefined,
+      src: '/aeon14-logo.png' as string | undefined,
+      alt: 'Aeon 14' as string | undefined,
     },
     layout: 'left' as 'left' | 'centered',
   },
