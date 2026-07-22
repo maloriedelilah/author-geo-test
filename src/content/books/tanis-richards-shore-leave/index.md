@@ -2,7 +2,7 @@
 title: "Tanis Richards: Shore Leave"
 slug: "tanis-richards-shore-leave"
 description: "Commander Tanis Richards finally makes port after seven months on the edge of Jovian space, ready for some hard-earned shore leave. Paired with an AI for a mandated psych procedure at a luxury resort on Vesta, her vacation turns dark when she comes face to face with someone she killed a week earlier — pulling her into a conspiracy that reaches into the Terran Hegemony itself, and a discovery that will upend everything she thought she knew about herself."
-cover: "./cover.jpg"
+cover: "./origins-of-destiny-tanis-richards-shore-leave.jpg"
 authors:
   - "mdcooper"
 series: "origins-of-destiny"
