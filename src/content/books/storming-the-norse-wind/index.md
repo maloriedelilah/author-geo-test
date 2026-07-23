@@ -6,7 +6,7 @@ cover: "./origins-of-destiny-storming-the-norse-wind.jpg"
 authors:
   - "mdcooper"
 series: "origins-of-destiny"
-seriesPosition: 0.5
+seriesPosition: 0
 datePublished: "2018-05-25"
 language: "en"
 genres:

@@ -94,7 +94,7 @@ Co-authors each get their own file here.
 | `alternateName` | | Array of pen names / initials, e.g. `["S. Voss"]`. |
 | `bio` | ✅ | Prose bio; also feeds the About page and the (truncated) homepage blurb. |
 | `photo` | | Path to an image, e.g. `./sera.jpg`. Optional. |
-| `url` | ✅ | Your canonical author URL (usually your site root). |
+| `url` | ✅ | Kept for backward compatibility, but **not currently used anywhere in generated output** (fixed 2026-07-23): the schema.org `Person.url` is now always the author's own canonical `/about` page, derived by the engine, not read from this field. Nothing else on the site renders it either. Safe to leave as-is or ignore. |
 | `sameAs` | | Array of URLs that disambiguate you: Wikipedia/Wikidata, Goodreads author page, socials. Strongly recommended for GEO. |
 | `email` | | Optional contact email. |
 
@@ -110,7 +110,7 @@ cover: "./cover.png"                     # required — every book has a cover
 authors:                                 # ARRAY, min 1 — co-author-safe (DD-001)
   - "malorie"                            #   each entry is an author SLUG (references src/content/author/)
 series: "the-cinder-cycle"               # optional — a series slug
-seriesPosition: 2                        # optional — order within the series
+seriesPosition: 2                        # optional — MUST be a whole number (0 for a prequel that reads before book 1)
 datePublished: "2024-03-05"
 language: "en"                           # default: en
 genres: ["science fiction", "hard sci-fi"]
@@ -118,8 +118,8 @@ editions:                                # ARRAY, min 1 — at least one buy lin
   - format: "ebook"                      #   ebook | paperback | hardcover | audiobook
     retailer: "Amazon"
     url: "https://.../buy/ebook"         #   the BUY LINK lives on the edition (-> schema Offer.url), NOT on the book (DD-005)
-    price: "4.99"                        #   optional
-    currency: "USD"                      #   default USD
+    price: "4.99"                        #   REQUIRED — plain decimal string, no currency symbols/commas
+    currency: "USD"                      #   default USD — must be a 3-letter ISO 4217 code
     isbn: "978..."                       #   optional
     asin: "B0..."                        #   optional
 comps:                                   # optional — "comparable titles", rendered inline on the book page
@@ -138,6 +138,12 @@ Two rules the schema enforces that matter for structured data:
   The Book's own canonical `url` is its page on your site (the engine sets it). This
   is DD-005 — a retailer link in `Book.url` would falsely claim the retailer as the
   canonical home of the work.
+- **`seriesPosition` must be a whole number.** It feeds `ListItem.position` in the
+  series' reading-order JSON-LD, which schema.org (and any consumer sorting by it)
+  expects to be an integer — a fractional placeholder like `0.5` for "this is a
+  prequel" fails the build now rather than silently shipping an unusable ordering
+  value. If a book reads before the series' book 1, give it `seriesPosition: 0`
+  instead of inventing a fractional slot.
 
 ### Series — `src/content/series/<slug>.md`
 
@@ -376,6 +382,23 @@ failure the build won't catch — run the gate):
 
 5. **Prove changes with the gate, not the build.** Merge all `ld+json` blocks per
    page and validate; require SUCCESS + zero dangling refs across every page type.
+
+6. **A page gets exactly ONE node describing the page itself, never two.**
+   `Base.astro`'s per-page node is `WebPage` by default — but if a page's real
+   subject is a more specific kind of page (e.g. a themed hub is a
+   `CollectionPage`, which **is-a** `WebPage` in schema.org's own hierarchy),
+   that page overrides the per-page node's own `@type`/`@id`/extra properties
+   (`pageType`/`pageId`/`pageExtra` props on `<Base>`) rather than ALSO
+   emitting a second, separate full node (fixed 2026-07-23 — hub pages used to
+   do exactly that, asserting the same `name`/`description` twice for one
+   URL). See `hubPageExtra()` in `jsonld.ts` and `themes/[slug].astro`.
+
+7. **Every image `alt`, `og:image:alt`/`twitter:image:alt`, and `Person.url`
+   must describe the actual thing it's attached to** (fixed 2026-07-23) — never
+   a generic fallback or the page `title`, which describes the page, not
+   necessarily the picture next to it (the homepage's `title` is the author's
+   name; its image is a book cover). Pass `imageAlt` alongside `image` to
+   `<Base>`; it resolves in lockstep so the two can never drift apart.
 
 **When you pull upstream:** engine changes land in `src/` (outside `src/content/`);
 your content stays untouched. If an upstream schema change requires a content
