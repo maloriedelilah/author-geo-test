@@ -305,6 +305,13 @@ section + section {
   margin-top: 1.5rem;
 }
 
+/* "Get the book" heading only — 25% smaller than the browser-default h2 size
+   it'd otherwise get here (measured 24px -> 18px) and uppercased, per request. */
+.get-book-section h2 {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
 /* "If you like..." (comps) stays below the whole book-card, but that's a
    <div> not a <section>, so it also needs explicit spacing rather than
    relying on the adjacent-section rule. */
@@ -379,9 +386,24 @@ section + section {
 
 /* The series' own description text, wherever a series is introduced (series
    index cards, a series' own detail page, the homepage's series teaser) —
-   kept as its own class distinct from .book-blurb above for the same reason. */
+   kept as its own class distinct from .book-blurb above for the same reason.
+   25% smaller than body text, with tighter line spacing to match. */
 .series-description {
+  font-size: 0.75rem;
+  line-height: 1.3;
   margin: 0 0 0.75em;
+}
+
+/* Series list page (/series) only: double the gap between a series'
+   description and its book list, per request. Scoped to this adjacency
+   (series-description immediately followed by a .book-thumb-list) so it
+   doesn't affect the homepage teaser or a series' own detail page, neither
+   of which has that same immediate description -> list structure. Relies on
+   margin collapsing: this rem-based top margin dominates .series-description's
+   own (now smaller, em-based) bottom margin, landing at exactly 2x the
+   original ~12px gap regardless of the font-size change above. */
+.series-description + .book-thumb-list {
+  margin-top: 1.5rem;
 }
 
 /* Higher specificity than ".card img" (which the series-list <section class="card">
@@ -403,27 +425,30 @@ section + section {
   }
 }
 
-/* --- Homepage series teaser (text left, overlapping cover fan right) ------- */
-/* index.astro's "Series" section: each series' blurb/book-list on the left,
-   a small overlapping "fan" of its first 3 covers on the right — decorative
-   only (aria-hidden; the book list to the left already carries the real
+/* --- Homepage series teaser (title/description full-width, book list left +
+   overlapping cover fan right, below the description) ------------------------ */
+/* index.astro's "Series" section: title and description sit full-width at the
+   top of the card; the book list and a small overlapping "fan" of the
+   series' first 3 covers form a row underneath (.series-list-row) — the fan
+   is decorative only (aria-hidden; the book list already carries the real
    links), so it's fine if a series has fewer than 3 books. Folds to a single
    stacked column on narrow screens, same convention as .book-card. */
 
-.series-card {
+.series-card > :first-child {
+  margin-top: 0;
+}
+
+.series-list-row {
   display: flex;
   gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
 }
 
-.series-card-body {
+.series-list-row ul {
   flex: 1;
   min-width: 0;
-}
-
-.series-card-body > :first-child {
-  margin-top: 0;
+  margin: 0;
 }
 
 .series-covers-stack {
@@ -450,7 +475,7 @@ section + section {
 }
 
 @media (max-width: 640px) {
-  .series-card {
+  .series-list-row {
     flex-direction: column;
     align-items: stretch;
   }
