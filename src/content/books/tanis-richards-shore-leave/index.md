@@ -18,11 +18,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B07HGJ1CFK"
     asin: "B07HGJ1CFK"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Tanis-Richards-Shore-Origins-Destiny/dp/1643650076"
     isbn: "9781643650074"
+    price: "14.99"
     currency: "USD"
 ---
 

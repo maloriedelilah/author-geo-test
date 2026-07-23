@@ -18,11 +18,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B07DMRKZ2H"
     asin: "B07DMRKZ2H"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Tanis-Richards-Masquerade-Origins-Destiny/dp/1643650181"
     isbn: "9781643650180"
+    price: "14.99"
     currency: "USD"
 ---
 

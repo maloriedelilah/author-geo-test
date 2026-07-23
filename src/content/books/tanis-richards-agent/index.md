@@ -20,6 +20,9 @@ editions:
     # link — swap for the real preorder URL as soon as it's live. Kept as a
     # real, working link rather than a dead/fake one in the meantime.
     url: "https://www.amazon.com/M-D-Cooper/e/B008I6L0Q6"
+    # PLACEHOLDER: matches every other Origins of Destiny ebook's price;
+    # confirm/update once Amazon has a real preorder listing with its own price.
+    price: "4.99"
     currency: "USD"
 ---
 

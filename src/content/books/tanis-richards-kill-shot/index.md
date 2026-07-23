@@ -18,11 +18,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B07GYR37S4"
     asin: "B07GYR37S4"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Tanis-Richards-Kill-Origins-Destiny/dp/1643650343"
     isbn: "9781643650340"
+    price: "14.99"
     currency: "USD"
 ---
 

@@ -19,11 +19,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B008GZ8HEM"
     asin: "B008GZ8HEM"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Outsystem-Aeon-Novel-Intrepid-Saga/dp/1477651527"
     isbn: "9781477651520"
+    price: "14.99"
     currency: "USD"
 comps:
   - name: "The Expanse"

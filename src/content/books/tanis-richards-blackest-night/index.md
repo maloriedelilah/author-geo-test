@@ -18,11 +18,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B07DQD7X1G"
     asin: "B07DQD7X1G"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Tanis-Richards-Blackest-Origins-Destiny/dp/164365022X"
     isbn: "9781643650227"
+    price: "14.99"
     currency: "USD"
 ---
 

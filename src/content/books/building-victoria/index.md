@@ -18,11 +18,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B01FWZ5HRS"
     asin: "B01FWZ5HRS"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Building-Victoria-Intrepid-Saga-Aeon/dp/1665275103"
     isbn: "9781665275101"
+    price: "14.99"
     currency: "USD"
 ---
 

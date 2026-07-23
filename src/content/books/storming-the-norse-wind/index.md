@@ -18,6 +18,7 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B07DBD68QM"
     asin: "B07DBD68QM"
+    price: "0.99"
     currency: "USD"
 comps:
   - name: "Boarding-action military SF"

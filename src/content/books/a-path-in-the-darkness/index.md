@@ -19,11 +19,13 @@ editions:
     retailer: "Amazon"
     url: "https://www.amazon.com/dp/B00R53GJVO"
     asin: "B00R53GJVO"
+    price: "4.99"
     currency: "USD"
   - format: "paperback"
     retailer: "Amazon"
     url: "https://www.amazon.com/Path-Darkness-Aeon-Novel-Intrepid/dp/1505701678"
     isbn: "9781505701678"
+    price: "14.99"
     currency: "USD"
 ---
 
