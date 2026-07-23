@@ -24,6 +24,12 @@ editions:
     # confirm/update once Amazon has a real preorder listing with its own price.
     price: "4.99"
     currency: "USD"
+    # PLACEHOLDER: no real Amazon ASIN exists yet -- this edition isn't a live
+    # preorder listing there yet (see the url placeholder above). The schema
+    # now requires at least one canonical identifier (isbn/asin/sku) per
+    # edition, so this is a temporary internal sku standing in until Amazon
+    # assigns a real asin for the actual preorder listing -- swap it out then.
+    sku: "MDC-TRO5-PREORDER"
 ---
 
 Book 5 of *Origins of Destiny*, following *Tanis Richards: Kill Shot*.
