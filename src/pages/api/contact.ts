@@ -53,6 +53,22 @@ export const POST: APIRoute = async ({ request }) => {
     hasContactTo: Boolean(env.CONTACT_TO_EMAIL),
     hasContactFrom: Boolean(env.CONTACT_FROM_EMAIL),
   });
+  // Dump every key actually present on the env object itself — catches a
+  // typo'd/trailing-space variable name in the dashboard that a targeted
+  // Boolean(env.EXACT_NAME) check would just silently read as undefined
+  // without ever revealing there's a similarly-named key sitting right next
+  // to it. Also compare `in` (proxy "has" trap) vs Object.keys (enumeration)
+  // in case env is a Proxy where those two disagree — never log values.
+  console.log('Contact form env raw key inspection:', {
+    objectKeysEnv: Object.keys(env as object),
+    reflectOwnKeysEnv: Reflect.ownKeys(env as object).map(String),
+    inOperatorChecks: {
+      RESEND_API_KEY: 'RESEND_API_KEY' in env,
+      TURNSTILE_SECRET_KEY: 'TURNSTILE_SECRET_KEY' in env,
+      CONTACT_TO_EMAIL: 'CONTACT_TO_EMAIL' in env,
+      CONTACT_FROM_EMAIL: 'CONTACT_FROM_EMAIL' in env,
+    },
+  });
 
   let form: FormData;
   try {
