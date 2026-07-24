@@ -74,6 +74,12 @@ export const POST: APIRoute = async ({ request }) => {
     remoteIp
   );
   if (!turnstileResult.ok) {
+    // Same gap as the Resend catch below: verifyTurnstile already returns
+    // Cloudflare's real error-codes (e.g. "timeout-or-duplicate" for a
+    // reused/expired token, "invalid-input-secret" for a wrong/missing
+    // secret key), but they were being discarded — invisible even with
+    // Workers Logs on. Client-facing message stays generic on purpose.
+    console.error('Contact form: Turnstile verification failed —', turnstileResult.errorCodes);
     return jsonResponse(
       { ok: false, error: 'Spam check failed — please try again.' },
       400
