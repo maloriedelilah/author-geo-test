@@ -42,6 +42,18 @@ function jsonResponse(body: unknown, status = 200) {
 }
 
 export const POST: APIRoute = async ({ request }) => {
+  // TEMPORARY diagnostic — presence-only (never values) check of every
+  // runtime var this endpoint depends on, logged before any other logic
+  // runs. Added specifically to answer "is env even being read correctly at
+  // all, or is this isolated to one variable" without more guessing. Remove
+  // once the contact form is confirmed working end-to-end in production.
+  console.log('Contact form env presence check:', {
+    hasResendKey: Boolean(env.RESEND_API_KEY),
+    hasTurnstileSecret: Boolean(env.TURNSTILE_SECRET_KEY),
+    hasContactTo: Boolean(env.CONTACT_TO_EMAIL),
+    hasContactFrom: Boolean(env.CONTACT_FROM_EMAIL),
+  });
+
   let form: FormData;
   try {
     form = await request.formData();
