@@ -1,4 +1,15 @@
+# dependencies
 node_modules/
+# build output
 dist/
-.env
 .astro/
+.wrangler/
+# env & secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+# os / editor
+.DS_Store
+*.log
+.vscode/
