@@ -91,6 +91,12 @@ export const POST: APIRoute = async ({ request }) => {
       text: `From: ${name} <${email}>\n\n${message}`,
     });
   } catch (err) {
+    // Log the REAL cause (Resend's actual status + response body, per
+    // resend.ts's thrown Error) so Workers Logs shows why a send failed —
+    // the response to the browser stays a generic message on purpose
+    // (never leak API-key/account details to the client), but without this
+    // log line the real reason is invisible even with observability on.
+    console.error('Contact form: Resend send failed —', err instanceof Error ? err.message : err);
     return jsonResponse(
       { ok: false, error: 'Message could not be sent — please try again later.' },
       502
